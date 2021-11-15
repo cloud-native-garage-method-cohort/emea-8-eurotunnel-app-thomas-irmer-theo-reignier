@@ -5,3 +5,10 @@ resources:
 - deployment.yaml
 - route.yaml
 - service.yaml
+images:
+- name: quay.io/upslopeio/eurotunnel-app
+  newName: quay.io/theorei/eurotunnel-app
+  newTag: 8aff3781cc5c43e6ac137b2d827af16bca4ce0a1ee7419e35d71b5f8da6a82e3
+commonLabels:
+  app.kubernetes.io/instance: eurotunnel-app
+  app.kubernetes.io/name: eurotunnel-app
