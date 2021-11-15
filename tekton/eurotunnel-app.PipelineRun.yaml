@@ -9,6 +9,8 @@ spec:
       value: https://github.com/cloud-native-garage-method-cohort/emea-8-eurotunnel-app-thomas-irmer-theo-reignier
     - name: image-repo
       value: quay.io/theorei/eurotunnel-app
+    - name: app-name
+      value: eurotunnel-app
   pipelineRef:
     name: eurotunnel-app
   workspaces:

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eurotunnel-app
+spec:
+  selector:
+    matchLabels:
+      app: eurotunnel-app
+  template:
+    metadata:
+      labels:
+        app: eurotunnel-app
+    spec:
+      containers:
+      - name: eurotunnel-app
+        image: quay.io/theorei/eurotunnel-app
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - name: http
+          containerPort: 3000

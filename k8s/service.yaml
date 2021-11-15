@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/instance: eurotunnel-app
+    app.kubernetes.io/name: eurotunnel-app
+  name: eurotunnel-app
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 3000
+  selector:
+    app.kubernetes.io/instance: eurotunnel-app
+    app.kubernetes.io/name: eurotunnel-app
